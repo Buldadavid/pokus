@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="8859">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Title</title>
+</head>
+<style>
+  body {
+    background: #336193;
+    color: black;
+    font-family: 'Bebas';
+    text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 0.15em;
+    font-size: 3em;
+    line-height: 1.2;
+    transform: translateY(52%);
+  }
+  
+  
+  #toggle {
+    display: none;
+  }
+  
+  /**
+    Hamburger
+  **/
+  .hamburger {
+    position: absolute;
+    top: 5em;
+    right: 5%;
+    margin-left: -2em;
+    margin-top: -45px;
+    width: 2em;
+    height: 45px;
+    z-index: 5;
+  }
+  
+  .hamburger div {
+    position: relative;
+    width: 3em;
+    height: 7px;
+    border-radius: 3px;
+    background-color: black;
+    margin-top: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /**
+  Nav Styles
+  **/
+  .nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    top: -100%; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+  }
+  .nav-wrapper {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    wight = 100%;
+    height: 100%;
+  
+  }
+  nav {
+    text-align: left;
+    wight = 100%;
+  }
+  nav a {
+    position: relative;
+    
+    text-decoration: none;
+    color: #6ecddd;
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 1.25em;
+    transition: color 0.2s ease-in-out;
+    letter-spacing: 1px;
+  }
+  nav a:before {
+    content: '';
+    height: 0;
+    
+    position: absolute;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  
+  /**
+  Animations
+  **/
+  #toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+  }
+  #toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  #toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -7px;
+  }
+  
+  #toggle:checked + .hamburger + .nav {
+    top: 0;
+    transform: scale(1);
+  }
+  #orange
+    {
+      background-color: {{barva}};
+    }
+  #zetko
+  {
+  background-color: {{barvaZ}};
+  }
+  #odmerko
+  {
+  background-color: {{barvaO}};
+  }
+  #greet5 {
+      background-color: rgb(100, 100, 100);
+      border:  none;
+      height: 50px;
+      width:  100%;
+      color: white;
+      border-radius: 5px;
+  }
+  #vse {
+      background-color: rgb(100, 100, 100);
+      border:  none;
+      height: 50px;
+      width:  100%;
+      color: white;
+      border-radius: 5px;
+  }
+  body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+  color: white;
+  text-align: left;
+  font-family: arial, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 10%;
+  margin-bottom: 1px;
+  }
+  li {
+  font-family: arial, sans-serif;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 1px;
+  }
+  input, select {
+    width: 99%;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+    font-size: 20px;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td, th {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  tr:nth-child(odd) {
+    background-color: #fefefe;
+  }
+  
+  #nic th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #000000;
+    color: white;
+  }
+  </style>
+<body>
+
+<h1>Motor data</h1>
+
+<input id="toggle" type="checkbox"></input>
+
+<label for="toggle" class="hamburger">
+  <div class="top-bun"></div>
+  <div class="meat"></div>
+  <div class="bottom-bun"></div>
+</label>
+
+<div class="nav">
+<br><br><br><br><br><br>
+  <div class="nav-wrapper">
+    <nav>
+
+    
+    <td><form action="home" method="post">
+	<input type="submit" value="Home" id="vse">
+	</form></td><br>
+      <td><form action="manualne" method="get">
+ 	 <input type="submit" value="Manuálně" id="vse">
+	</form></td><br>
+      
+    </nav>
+  </div>
+</div>
+<br><br><br>
+
+<form method="post">
+	<table id="nic">
+    <tr>
+      <th colspan="2">Štítek</th>
+
+    </tr>
+    <tr>
+      <td>SF?</td>
+      <td><input name="text" required></td>
+
+    </tr>
+
+  </table><br>
+  <input type="submit" id="greet5">
+</form>
+
+<br><br><br>
+<table id="nic">
+  <tr>
+	<th colspan="2">Hodnota</th>
+
+  <tr>
+    <td>Firma</td>
+    <td >{{firma}}</td>
+  </tr>
+
+  <tr>
+    <td>AKZ</td>
+    <td >{{akz}}</td>
+  </tr>
+
+  <tr>
+    <td>DBZ</td>
+    <td >{{dbz}}</td>
+  </tr>
+
+  <tr>
+    <td>WB</td>
+    <td >{{wb}}</td>
+  </tr>
+
+  <tr>
+    <td>MLFB</td>
+    <td>{{mlfb}}</td>
+
+  </tr>
+  <tr>
+    <td>Z</td>
+    <td>{{z}}</td>
+
+  </tr>
+
+    <tr>
+    <td>Ser. č.</td>
+    <td >{{cislo}}</td>
+  </tr>
+
+  <tr>
+    <td>Datum</td>
+    <td >{{datum}}</td>
+  </tr>
+
+</table>
+ 
+
+</body>
+</html>
