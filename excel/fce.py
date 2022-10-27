@@ -11,7 +11,7 @@ od = ""
 while od == "":
     od = input("Začátek? ")
     
-od = od.upper()    
+od = od.capitalize()   
 
 sub_folders = [name for name in os.listdir(folder) if os.path.isdir(os.path.join(folder, name))]
 sub_folders = sorted(sub_folders)
