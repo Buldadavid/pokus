@@ -2,6 +2,12 @@ from openpyxl import load_workbook
 import csv
 import inquirer
 import os
+from datetime import *
+
+today = date.today()
+
+#print(today.strftime("%Y.%m.%d"))
+datum = today.strftime("%Y.%m.%d")
     
 #složka ve solici /diaglist    
 folder = r'V:\Diag. l'
@@ -47,8 +53,6 @@ while web == "":
     web = input("WB? ") 
 
 #print(firma,akz,dbz,web)
-
-datum = '=YEAR(TODAY())&"."&MONTH(TODAY())&"."&DAY(TODAY())'
 
 header = ['QR','Firma','AKZ','DBZ','WB','MLFB','Z','cislo','Datum']
 row = []
@@ -111,7 +115,7 @@ ws['E4'] = "Datum testu"
 ws['F1'] = MLFB
 ws['F2'] = Z
 ws['F3'] = cislo
-ws['F4'] = datum
+ws['F4'] = '=YEAR(TODAY())&"."&MONTH(TODAY())&"."&DAY(TODAY())'
 
 ws['H4'] = sf
 
